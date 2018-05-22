@@ -1,0 +1,66 @@
+1)Write C programs using the below mentioned system calls of the unix OS:
+	1)fork
+	2)exec
+	3)getpid
+	4)exit
+	5)wait
+	6)close
+	7)stat
+	8)opendir
+	9)readdir
+
+2)Write C programs using the i/o system calls of unix OS:
+	1)Open
+	2)Read
+	3)Write
+	4)Close
+3) Write C programs to simulate unix file commands
+
+Directories:
+mkdir r
+cd r
+pwd r
+
+finding:
+
+ff
+grep r
+
+files:
+emacs r
+more ra
+ls r
+ls -l r
+ls -a r
+mv r
+cp ra
+rm r
+diff ra
+wc r
+chmod rn
+
+compression:
+gzip r
+gunzip r
+gzcat
+
+printing:
+lpr
+lpq
+lprm
+genscript
+dvips
+
+AIM 4 :
+	Given the list of processes, their CPU burst times and arrival time, print the gantt chart for FCFS and SJF. 
+	For each scheduling policies, compare and print the average waiting time and average turnaround time.
+
+		Burst Time	Arrival Time
+	P1	   10                10
+	P2 	    4		     14
+	P3	   11		     25
+	P4 	    6		     31
+	(ii) Take inputs from the user.
+	
+AIM 5 :
+Priority and round robin
