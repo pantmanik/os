@@ -1,4 +1,0 @@
-#!/usr/bin/env python
-from something import cc
-CC = cc()
-CC.printMSG("Manish")
