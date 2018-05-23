@@ -62,5 +62,4 @@ int main()
 	printf("The average waiting time is : %fms\n",avg_waiting_time);
 	printf("The average turnaround time is : %fms\n",avg_turnaround_time);
 	return 0;	
-
 }
