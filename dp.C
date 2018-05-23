@@ -20,24 +20,21 @@ int main()
 
 	shmid_chopstick=shmget(key_chopstick, sizeof(int)*5, 0666|IPC_CREAT);
 	shmid_loop=shmget(key_loop, sizeof(int), 0666|IPC_CREAT);
+	shmid_counter=shmget(key_counter, sizeof(int), 0666|IPC_CREAT);
 	
 	
 	chopstick=(int *)shmat(shmid_chopstick,0,0);
 	loop=(int *)shmat(shmid_loop,0,0);
+	counter=(int *)shmat(shmid_counter,0,0);
 	
 
 	*loop=1;
 	for(i=0;i<5;++i)
 		chopstick[i]=1;
+
+	pid=*counter;
+	++*counter;
 	
-	printf("Enter Index of philosopher (starts from 0) : ");
-	again:
-	scanf("%d",&pid);
-	if(pid>=5)
-	{
-		printf("philosophers' index can't exceed 4, enter again : ");
-		goto again;
-	}
 	printf("This is philosopher %d.\n",pid);
 	printf("Enter e to eat and anything else to exit : \n");
 	while(*loop)
@@ -73,5 +70,7 @@ int main()
 	shmctl(shmid_chopstick, IPC_RMID, 0);
 	shmdt(loop);
 	shmctl(shmid_loop, IPC_RMID, 0);
+	shmdt(counter);
+	shmctl(shmid_counter, IPC_RMID, 0);
 	return 0;
 }
