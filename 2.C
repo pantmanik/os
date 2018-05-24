@@ -10,12 +10,12 @@ int main(int argc,char *argv[])
 	char data[80];
 	if (!strcmp(argv[1],"r"))
 	{
-		fd=open(argv[2],O_RDONLY);
+		fd=open(argv[2],O_RDONLY,0666);
 		printf("file opened in read mode\n");
 	}
 	else
 	{
-		fd=open(argv[2],O_WRONLY|O_CREAT);
+		fd=open(argv[2],O_WRONLY|O_CREAT,0666);
 	}
 	if(fd==-1)
 	{
